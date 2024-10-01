@@ -7,7 +7,7 @@ User = get_user_model()
 class Cat(models.Model):
     name = models.CharField(max_length=16)
     color = models.CharField(max_length=16)
-    birth_year = models.IntegerField()
+    birth_date = models.IntegerField()
     owner = models.ForeignKey(
         User, related_name='cats',
         on_delete=models.CASCADE
